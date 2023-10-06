@@ -47,7 +47,7 @@ function App() {
             type='search'
             onChange={(e) => setSearchValue(e.target.value)}
         />
-      <h1>Input fetch:</h1>
+      <h1>Country Result:</h1>
        <div>
            {searchResults?.length
             ? searchResults.map((item => <div><h2 key={item.cca3}>{item.flag} {item.name.common}</h2></div>))

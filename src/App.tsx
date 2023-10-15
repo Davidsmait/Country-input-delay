@@ -8,7 +8,11 @@ interface Country {
         common: string
     },
     cca3:string,
-    flag: string
+    flag: string,
+    flags: {
+      png: string,
+      svg: string
+    }
 }
 function App() {
   const [count, setCount] = useState(0);
@@ -50,7 +54,14 @@ function App() {
       <h1>Country Result:</h1>
        <div>
            {searchResults?.length
-            ? searchResults.map((item => <div><h2 key={item.cca3}>{item.flag} {item.name.common}</h2></div>))
+            ? searchResults.map((item => 
+            <div>
+              
+              <h2 key={item.cca3}>
+              <img style={{width: "40px", padding: "0 10px 0 0"}} src={item.flags.png}  />
+                 {item.name.common}
+                </h2>
+            </div>))
             : ''}
        </div>
       <div className="card">

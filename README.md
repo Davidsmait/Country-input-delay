@@ -5,6 +5,10 @@
   npm run dev
 ```
 
+## Firebase host
+
+ https://react-host-a19b1.web.app/
+
 ## Dependencies
 
 - https://www.npmjs.com/package/use-debounce
